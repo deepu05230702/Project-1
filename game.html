@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Speed Test Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 Typing Speed Test</h1>
+
+    <!-- Word Display Area -->
+    <div id="display" class="word-display">Click Start to Begin!</div>
+
+    <!-- Typing Input -->
+    <input type="text" id="input" placeholder="Type here..." disabled />
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="startBtn">Start Game</button>
+      <label for="time-mode">⏱ Time Mode:</label>
+      <select id="time-mode">
+        <option value="30">30 Seconds</option>
+        <option value="60" selected>1 Minute</option>
+        <option value="120">2 Minutes</option>
+      </select>
+    </div>
+
+    <!-- Score and Timer Display -->
+    <div class="stats">
+      <p><strong>Time Left:</strong> <span id="timer">60s</span></p>
+      <p><strong>Score:</strong> <span id="score">0</span></p>
+      <p><strong id="highScore">High Score: 0 WPM</strong></p>
+    </div>
+
+    <!-- WPM Chart -->
+    <div class="chart-container">
+      <canvas id="wpmChart" width="200" height="50"></canvas>
+    </div>
+
+    <!-- Navigation Link -->
+    <div class="back-link">
+      <a href="index.html">⬅ Back to Instructions</a>
+    </div>
+  </div>
+
+  <!-- Game Script -->
+  <script src="script.js"></script>
+</body>
+</html>
